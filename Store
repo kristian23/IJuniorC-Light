@@ -1,0 +1,18 @@
+
+            int money;
+            int foodСount;
+            int price = 10;
+            bool enoughMoney;
+
+            Console.WriteLine("Добро пожаловать в пекарню! Сегодня еда по " +price + " $");
+            Console.Write("Сколько у вас $? ");
+            money = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Сколько единиц еды вам нужно? ");
+            foodСount = Convert.ToInt32(Console.ReadLine());
+            enoughMoney = money >= foodСount * price;
+            foodСount *= Convert.ToInt32(enoughMoney);
+            money -= foodСount * price;
+
+            Console.WriteLine("У вас осталось " + money + " $" 
+                + " и " + foodСount + " единиц еды");
